@@ -11,7 +11,8 @@ if __name__ == '__main__':
                   port=5432)
 
     db.create_connection()
-    db.load_data_to_db("../PBD_data/DMR5G.xyz")
+    # bacha na ukládání dat vícekrát...pak se to hodně zpomalí
+    # db.load_data_to_db("../PBD_data/DMR5G.xyz")
 
     # LIMIT 2
     print(db.select_from_database(2))

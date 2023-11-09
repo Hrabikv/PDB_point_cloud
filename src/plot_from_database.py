@@ -18,9 +18,9 @@ def show_db_point_cloud(data):
     print("Z max: {0}, min: {1}, diff: {2}".format(max_z, min_z, np.abs(max_z - min_z)))
 
     fig = go.Figure(data=[go.Scatter3d(
-        x=x[:80_000],
-        y=y[:80_000],
-        z=z[:80_000],
+        x=x,
+        y=y,
+        z=z,
         mode='markers',
         marker=dict(
             size=2,
