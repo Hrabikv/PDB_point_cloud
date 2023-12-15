@@ -45,7 +45,7 @@ class DatabaseSpatial:
 
         # Create the GeoDataFrame and set the geometry column
         gdf = gpd.GeoDataFrame(df, geometry=geometry)
-        gdf.crs = "EPSG:4326"
+        gdf.crs = "EPSG:5514"
         gdf.to_postgis("pilsen", self.engine, if_exists="append", chunksize=10000)
 
     def select_from_database(self, limit=0):

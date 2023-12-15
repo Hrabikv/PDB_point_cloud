@@ -2,7 +2,8 @@ version: '3.8'
 services:
   db:
     container_name: postgres_postgis-db
-    image: mdillon/postgis
+#    image: mdillon/postgis
+    image: pgpointcloud/pointcloud
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin

@@ -1,0 +1,9 @@
+INSERT INTO public."pilsen_PC_patch"(pa)
+SELECT PC_Patch(pt) as pa
+from public."pilsen_PC_point"
+AS VALUES;
+
+SELECT PC_AsText(pa)
+	FROM public."pilsen_PC_patch";
+
+## vrátí JSON

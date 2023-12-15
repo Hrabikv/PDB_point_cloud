@@ -1,0 +1,4 @@
+CREATE TABLE pilsen_PC_point (
+	id SERIAL PRIMARY KEY,
+	pt PCPoint(1)
+)

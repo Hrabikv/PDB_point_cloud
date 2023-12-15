@@ -1,0 +1,22 @@
+# vytvoření tabulky pro PC body
+CREATE TABLE pilsen_PC_point (
+	id SERIAL PRIMARY KEY,
+	pt PCPoint(1)
+)
+
+# naplnění daty
+INSERT INTO public."pilsen_PC_point"(pt)
+SELECT PC_MakePoint(1, ARRAY[x,y,z])
+FROM (
+  SELECT
+  p.x AS x,
+  p.y AS y,
+  p.z AS z
+  FROM public.pilsen AS p
+) AS values;
+
+# vytvožení tabulky pro PC_Patch z tabulky bodů
+CREATE TABLE pilsen_PC_patch
+AS
+	SELECT PC_Patch(pt) AS pa
+	FROM public."pilsen_PC_point";

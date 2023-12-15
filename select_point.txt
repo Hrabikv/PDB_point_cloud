@@ -1,0 +1,4 @@
+SELECT PC_AsText(pt)
+	FROM public."pilsen_PC_point";
+
+## vrátí JSON
