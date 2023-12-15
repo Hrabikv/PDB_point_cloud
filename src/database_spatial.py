@@ -2,8 +2,6 @@ from sqlalchemy import create_engine
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point  # Import the Point class if it's not already imported
-import numpy as np
-import matplotlib.pyplot as plt
 import psycopg2
 
 

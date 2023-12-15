@@ -1,5 +1,4 @@
 from database_spatial import DatabaseSpatial
-from plot_from_database import show_db_point_cloud, show_point_cloud_from_file
 
 if __name__ == '__main__':
     # show_point_cloud_from_file()
@@ -10,9 +9,5 @@ if __name__ == '__main__':
                   port=5432)
 
     db.create_connection()
-
-    # LIMIT 2
-    print(db.select_from_database(2))
-
-    show_db_point_cloud(db.select_from_database())
-    db.close_connection()
+    # bacha na ukládání dat vícekrát...pak se to hodně zpomalí
+    db.load_data_to_db("../PBD_data/DMR5G.xyz")

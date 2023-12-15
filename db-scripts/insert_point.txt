@@ -1,12 +1,12 @@
-## test
+-- test
 
-INSERT INTO public."pilsen_PC_point"(
+INSERT INTO public."pilsen_pc_point"(
 	pt)
 	VALUES (PC_MakePoint(1, ARRAY[1,1,1]));
 
-## použitý příkaz
+-- použitý příkaz
 
-INSERT INTO public."pilsen_PC_point"(pt)
+INSERT INTO public."pilsen_pc_point"(pt)
 SELECT PC_MakePoint(1, ARRAY[x,y,z])
 FROM (
   SELECT
